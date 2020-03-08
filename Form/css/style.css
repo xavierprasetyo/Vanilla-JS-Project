@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root{
+    --success-color:#38FF26;
+    --error-color:#EB3821;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    background-color: #2c257a;
+}
+
+.box{
+    width: 70%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #191919;
+    color: white;
+    text-align: center;
+    border-radius: 24px;
+    box-shadow: 0px 1px 32px 0px rgba(0,227,197,0.59);;
+}
+
+h1{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+input{
+    border: 0;
+    display: block;
+    background: none;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4834d4;
+    padding: 14px 10px;
+    width: 45%;
+    outline: none;
+    border-radius: 24px;
+    color: white;
+    font-size: smaller;
+    transition: 0.3s;
+}
+
+.part small{
+    visibility: hidden;
+    display: none;
+}
+
+.part.error small{
+    visibility: visible;
+    display: block;
+    color: var(--error-color);
+}
+
+.part.success input{
+    border-color: var(--success-color);
+
+}
+
+.part.error input{
+    border-color: var(--error-color);
+}
+
+input:focus{
+    width: 90%;
+    border-color:#22a6b3 ;
+}
+
+input[type='submit']{
+    border: 0;
+    display: block;
+    background: none;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #22a6b3;
+    padding: 14px 10px;
+    width: 140px;
+    outline: none;
+    border-radius: 24px;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+input[type='submit']:hover{
+    background-color: #22a6b3;
+}

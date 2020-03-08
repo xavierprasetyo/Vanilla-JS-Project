@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #192a56;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.movie-container{
+    margin: 20px 0;
+    select {
+        background-color: white;
+        border: 0;
+        border-radius: 10px;
+        font-size: 14px;
+        margin-left: 10px;
+        padding: 5px 15px;
+        appearance: none;
+
+    }
+}
+
+.container{
+    perspective: 1000px;
+    margin-bottom: 10px;
+}
+.seat{
+    background-color: white;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    &:nth-of-type(2){
+        margin-right: 18px;
+    }
+    &:nth-last-of-type(2){
+        margin-left: 18px;
+    }
+    &.selected{
+        background-color: #61caff;
+    }
+    &.occupied{
+        background-color: #7f8c8d;
+    }
+    &:not(.occupied):hover{
+        cursor: pointer;
+        transform: scale(1.4);
+        transition: 0.2s;
+    }
+    
+}
+
+.showcase{
+    background: rgba($color: #000000, $alpha: 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    list-style-type: none;
+    color: rgb(180, 180, 180);
+    justify-content: space-between;
+    .seat:not(.occupied):hover{
+        cursor: default;
+        transform: scale(1);
+    }
+    li {
+        display: flex;
+        margin: 0px 10px;
+        justify-content: center;
+        align-items: center;
+        small{
+            margin-left: 3px;
+        }
+    }
+}
+.screen{
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0px;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba($color: #fff, $alpha: 0.7);
+}
+.row{
+    display: flex;
+}
+
+p.text{
+    margin: 5px 0;
+    span{
+        color: #0097e6;
+    }
+}
